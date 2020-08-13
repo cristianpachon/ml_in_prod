@@ -8,7 +8,7 @@ def index():
 
 
 @app.route('/your_name', methods = ['POST'])
-def patata(name=None):
+def display_name(name=None):
     name = request.form.get('content')
     if name is None:
         name = 'Loser'
