@@ -1,15 +1,18 @@
-<html>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Some random comments</title>
+    </head>
 
-    <h2>Model form</h2>
-
-    <form action="{{ url_for('display_name') }}" method="POST">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="content" value="John"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value="Doe"><br><br>
-        <input type="submit" value="Submit">
-    </form> 
-
-</body>
+    <body>
+        <h2>Model form</h2>
+        <form action="{{ url_for('display_name') }}" method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.username.label() }}<br>
+            {{ form.username }}<br>
+            {{ form.usersurname.label() }}<br>
+            {{ form.usersurname }}<br><br>
+            {{ form.submit() }}
+        </form>
+    </body>
 </html>
