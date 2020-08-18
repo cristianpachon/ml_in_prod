@@ -8,13 +8,11 @@
         <h2>Model form</h2>
         <form method="POST" action="">
             {{ form.hidden_tag() }}
-            {{ form.username.label }}<br>
-            {{ form.username }}<br>
-            {% for error in form.username.errors %}
+            {{ form.median_age.label }}<br>
+            {{ form.median_age }}<br>
+            {% for error in form.median_age.errors %}
                 <span>{{ error }}</span><br><br>
             {% endfor %}
-            {{ form.usersurname.label }}<br>
-            {{ form.usersurname }}<br><br>
             {{ form.submit() }}
         </form>
     </body>

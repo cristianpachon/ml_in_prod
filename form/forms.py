@@ -1,8 +1,7 @@
 from flask_wtf import FlaskForm
-from wtforms import DecimalField, StringField, SubmitField
-from wtforms.validators import DataRequired, Length
+from wtforms import SubmitField, FloatField
+from wtforms.validators import DataRequired, NumberRange
 
 class InputFeatures(FlaskForm):
-    username = StringField('Name', validators = [DataRequired(), Length(min=7)])
-    usersurname = StringField('Surname')
-    submit = SubmitField('Submit')
+    median_age = FloatField('Median Age', validators=[DataRequired(), NumberRange(min=0)])
+    submit = SubmitField('Submit form')
