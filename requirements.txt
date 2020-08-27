@@ -1,2 +1,5 @@
 Flask==1.1.2
 Flask-WTF==0.14.3
+joblib==0.16.0
+numpy==1.14.5
+sklearn==0.0
