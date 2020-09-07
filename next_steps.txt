@@ -1,0 +1,5 @@
+* Add tests
+
+* Make a list of features outside the code
+
+* Store data in DB
