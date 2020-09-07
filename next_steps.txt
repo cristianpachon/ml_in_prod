@@ -1,5 +1,5 @@
 * Add tests:
-    * Use model object instead of model.get_prediction import get_prediction
+    * Validate feature creation is well done
 
 * Make a list of features outside the code
 
