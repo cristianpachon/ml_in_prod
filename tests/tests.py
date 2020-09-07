@@ -1,15 +1,15 @@
 import pytest
-from model.get_prediction import get_prediction
+from model import model
 import numpy as np
 
 def test_model():
-    features = {'median_age' : 12}
+    features = np.array([12]).reshape(-1, 1)
     
     try:
-        predicted_value = get_prediction(features)[0][0]
+        predicted_value = model.predict(features)
     except:
-        predicted_value = 0
-    
+        predicted_value = None
+
     real_value = 191392.543992269
     diff = abs(predicted_value - real_value)
     assert diff < 1e-6
