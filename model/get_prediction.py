@@ -3,7 +3,6 @@ from model import features_names
 import numpy as np
 
 def transform_features(raw_features):
-    features = ['median_age']
     list_features = [raw_features[feature] for feature in features_names]
     return np.array(list_features).reshape(-1, 1)
 
