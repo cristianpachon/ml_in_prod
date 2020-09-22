@@ -1,5 +1,5 @@
-from form import app
-from form.forms import InputFeatures
+from application import app
+from application.forms import InputFeatures
 from flask import Flask, render_template, redirect, url_for, session
 from model.get_prediction import get_prediction
 import logging
@@ -7,7 +7,7 @@ import logging.config
 import yaml
 
 # Logging initialisation
-with open('logging.yaml', 'r') as f:
+with open('./webapp/logging.yaml', 'r') as f:
     log_cfg = yaml.safe_load(f.read())
     logging.config.dictConfig(log_cfg)
     logger = logging.getLogger('simpleExample')

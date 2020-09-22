@@ -1,6 +1,6 @@
 import joblib
 
-filepath = './data/linear_regression.joblib'
+filepath = './webapp/data/linear_regression.joblib'
 
 features_names = {'median_age'}
 
