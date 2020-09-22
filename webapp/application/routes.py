@@ -7,7 +7,7 @@ import logging.config
 import yaml
 
 # Logging initialisation
-with open('./webapp/logging.yaml', 'r') as f:
+with open('./logging.yaml', 'r') as f:
     log_cfg = yaml.safe_load(f.read())
     logging.config.dictConfig(log_cfg)
     logger = logging.getLogger('simpleExample')
