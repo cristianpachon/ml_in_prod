@@ -1,5 +1,8 @@
 * Store data in DB:
-    * Start with simple DB
+    * Two tables:
+        * raw_features
+        * predictions: there should be a link to raw_features table
+    * For timestamp columns, use utc
     * Move to GCP (sql(BigQuery))
 
 * Add tests:
