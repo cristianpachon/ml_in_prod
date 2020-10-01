@@ -3,7 +3,14 @@
         * raw_features
         * predictions: there should be a link to raw_features table
     * For timestamp columns, use utc
-    * Move to GCP (sql(BigQuery))
+
+* Make docker-compose work
+
+* Sensitive information encryptions
+
+* Rename model to ml_models
+
+* Move database to GCP (sql/BigQuery)
 
 * Add tests:
     * Validate feature creation is well done
