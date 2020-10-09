@@ -1,9 +1,12 @@
 * Store data in DB:
     * Add created_at column in db
+    * If docker then db else localhost in config file
     * Two tables:
         * raw_features
         * predictions: there should be a link to raw_features table
     * For timestamp columns, use utc
+
+* Remove model from the mail project (make a different directory)
 
 * Make docker-compose work
 
