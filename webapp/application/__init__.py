@@ -1,8 +1,8 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from flask_pymongo import PyMongo
 
 app = Flask(__name__)
 app.config.from_object("application.config.Config")
-db = SQLAlchemy(app)
+mongo = PyMongo(app)
 
 from application import routes

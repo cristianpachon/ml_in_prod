@@ -1,0 +1,15 @@
+docker run -d -p 27017:27017 --name mongo \
+    -e MONGO_INITDB_ROOT_USERNAME=mongoadmin \
+    -e MONGO_INITDB_ROOT_PASSWORD=secret \
+    mongo
+
+mongo -u mongoadmin -p secret 
+
+# Create a collection
+use collectionName
+
+# Query a collection
+db.collectionName.find({})
+
+# Insert a document
+db.house_information.insertOne({median_age:55})

@@ -1,12 +1,12 @@
-from application import app, db
+from application import app
 from application.forms import InputFeatures
+from application.db_manager import manage_db_action 
 from flask import Flask, render_template, redirect, url_for, session
 from model.get_prediction import get_prediction
 import logging
 import logging.config
 import yaml
 import uuid
-from application.db_models import HouseInformation
 
 # Logging initialisation
 with open('./logging.yaml', 'r') as f:
@@ -20,8 +20,7 @@ def index():
     session['uuid'] = str(uuid.uuid4())
     if form.validate_on_submit():
         session['median_age'] = form.median_age.data
-        db.session.add(HouseInformation(uuid=session['uuid'], house_description=form.data))
-        db.session.commit()
+        manage_db_action(action='insert', table='house_information', data=form.data)
         return redirect(url_for('display_info'))
     else:
         logger.info('Rendenring index')
